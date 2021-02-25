@@ -6,9 +6,15 @@ class ActivitiesController < ApplicationController
 
     def findActivity
         # byebug
-        response=@@client.search(params[:zipcode], term: params[:type])
+        response=@@client.search(params[:zipcode], term: 'food')
         # byebug
         render json: response
+    end
 
+    def findFoodActivity
+        # byebug
+        foodResponse=@@client.search(params[:zipcode], term: 'food')
+        activityResponse=@@client.search(params[:zipcode], term: 'things-to-do')
+        render json: {food: foodResponse, activity: activityResponse}
     end
 end

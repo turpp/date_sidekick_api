@@ -6,6 +6,9 @@ Rails.application.routes.draw do
 
 
 
-  get '/search/:zipcode/:type', to: 'activities#findActivity'
+  get '/search/:zipcode/food', to: 'activities#findActivity'
+  get '/search/:zipcode/food-activity', to: 'activities#findFoodActivity'
+
+
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
