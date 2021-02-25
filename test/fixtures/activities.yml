@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  yelpID: MyString
+  string: MyString
+  name: MyString
+  img_url: MyString
+  yelpUrl: MyString
+  categories: MyString
+  price: 1
+  adress: MyString
+  phone: MyString
+
+two:
+  yelpID: MyString
+  string: MyString
+  name: MyString
+  img_url: MyString
+  yelpUrl: MyString
+  categories: MyString
+  price: 1
+  adress: MyString
+  phone: MyString

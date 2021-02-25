@@ -1,0 +1,2 @@
+class DateActivity < ApplicationRecord
+end
