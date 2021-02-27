@@ -28,6 +28,9 @@ gem 'rack-cors'
 #Use to interact with Yelp Fusion API
 gem 'yelp-fusion'
 
+#use to secure user access on website
+get 'jwt'
+
 
 
 

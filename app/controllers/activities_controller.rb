@@ -17,4 +17,5 @@ class ActivitiesController < ApplicationController
         activityResponse=@@client.search(params[:zipcode], term: 'things-to-do')
         render json: {food: foodResponse, activity: activityResponse}
     end
+
 end
