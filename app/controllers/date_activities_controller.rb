@@ -1,2 +1,0 @@
-class DateActivitiesController < ApplicationController
-end

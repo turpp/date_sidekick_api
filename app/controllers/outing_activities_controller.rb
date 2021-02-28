@@ -1,0 +1,2 @@
+class OutingActivitiesController < ApplicationController
+end
