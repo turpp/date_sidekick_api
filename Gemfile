@@ -29,7 +29,7 @@ gem 'rack-cors'
 gem 'yelp-fusion'
 
 #use to secure user access on website
-get 'jwt'
+gem 'jwt'
 
 
 
