@@ -28,9 +28,9 @@ ActiveRecord::Schema.define(version: 2021_02_25_002815) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "date_activities", force: :cascade do |t|
-    t.integer "userId"
-    t.integer "activityId"
+  create_table "outing_activities", force: :cascade do |t|
+    t.integer "outing_id"
+    t.integer "activity_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
