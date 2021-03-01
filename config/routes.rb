@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :activities
   resources :outings
   resources :users
-  resources :sessions, only [:create]
+  resources :sessions, only: [:create]
 
 
   get '/search/:zipcode/food', to: 'activities#findActivity'
