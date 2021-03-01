@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get '/search/:zipcode/food', to: 'activities#findActivity'
   get '/search/:zipcode/food-activity', to: 'activities#findFoodActivity'
   get '/logged_in', to: 'sessions#logged_in'
+  delete '/logout', to: 'sessions#logout'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
