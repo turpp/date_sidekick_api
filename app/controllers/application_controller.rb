@@ -37,9 +37,9 @@ class ApplicationController < ActionController::Base
     # end
 
     skip_before_action :verify_authenticity_token
-    helper_method :logged_in, :current_user
+    helper_method :logged_in?, :current_user
     
-    def logged_in
+    def logged_in?
         !!current_user
     end
 
