@@ -1,7 +1,7 @@
 class OutingsController < ApplicationController
 
     def create
-        byebug
+        # byebug
         user = User.find_by(id: params[:user][:id])
         date=params[:date]
         outing=Outing.new()
@@ -18,6 +18,7 @@ class OutingsController < ApplicationController
         end
         outing.activities << activity
         outing.save
+        activity.save
         render json: {status: 201}
 
     end

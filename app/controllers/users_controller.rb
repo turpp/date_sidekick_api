@@ -40,6 +40,12 @@ class UsersController < ApplicationController
        end
     end
 
+    def show
+        user = User.find_by(id: params[:id])
+        render json: user, include: [:outings, :activities]
+
+    end
+
 
     private
     def user_params
