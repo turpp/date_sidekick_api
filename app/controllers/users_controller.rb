@@ -42,10 +42,19 @@ class UsersController < ApplicationController
 
     def show
         user = User.find_by(id: params[:id])
-        
+        # byebug
         # render json: user, include: [:outings, include: [:activities], :activities]
         # render :json => user, :include => {:outings => {:include => :activities}} 
-        render :json => user, :include => {:outings => {:include => :activities}} 
+        # render :json => user, :include => {:outings => {:include => :activities}}
+        options = {
+            include: [:outings, :activities]
+          }
+        render json: UserSerializer.new(user, options)
+
+        
+        
+        
+        # render json: {user: user, outings: user.outings, activities: user.activities}
 
         
     end
