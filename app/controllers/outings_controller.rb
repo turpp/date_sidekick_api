@@ -63,4 +63,11 @@ class OutingsController < ApplicationController
         end
 
     end
+
+    def destroy
+        outing=Outing.find_by(params[:id])
+        outing.destroy
+
+
+    end
 end
