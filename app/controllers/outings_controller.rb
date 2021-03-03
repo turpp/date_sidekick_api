@@ -65,9 +65,10 @@ class OutingsController < ApplicationController
     end
 
     def destroy
-        outing=Outing.find_by(params[:id])
+        # byebug
+        outing=Outing.find_by(id: params[:id])
         outing.destroy
-
+        render json: {status: 204}
 
     end
 end
