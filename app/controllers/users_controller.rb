@@ -42,9 +42,14 @@ class UsersController < ApplicationController
 
     def show
         user = User.find_by(id: params[:id])
-        render json: user, include: [:outings, :activities]
+        
+        # render json: user, include: [:outings, include: [:activities], :activities]
+        # render :json => user, :include => {:outings => {:include => :activities}} 
+        render :json => user, :include => {:outings => {:include => :activities}} 
 
+        
     end
+    
 
 
     private

@@ -18,12 +18,12 @@ ActiveRecord::Schema.define(version: 2021_02_25_002815) do
   create_table "activities", force: :cascade do |t|
     t.string "yelpID"
     t.string "name"
-    t.string "img_url"
-    t.string "yelpUrl"
+    t.string "image_url"
+    t.string "url"
     t.string "categories"
     t.integer "price"
-    t.string "adress"
-    t.string "phone"
+    t.string "location"
+    t.string "display_phone"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
