@@ -6,13 +6,24 @@
 # Read more: https://github.com/cyu/rack-cors
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  # production
   allow do
-    # origins 'http://localhost:3001'
     origins 'https://glacial-harbor-67608.herokuapp.com'
-
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
       credentials: true
   end
+
+# development
+  allow do
+    origins 'http://localhost:3001'
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head],
+      credentials: true
+  end
+
 end
+
+
