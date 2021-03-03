@@ -1,4 +1,4 @@
 class OutingSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :date, :notes, :user_id, :activities
+  attributes :id, :date, :notes, :user_id, :activities
 end
