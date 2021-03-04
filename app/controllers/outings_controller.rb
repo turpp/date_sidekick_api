@@ -1,7 +1,6 @@
 class OutingsController < ApplicationController
 
     def create
-        # byebug
         user = User.find_by(id: params[:user][:id])
 
         if params[:type]=='food'
@@ -29,7 +28,6 @@ class OutingsController < ApplicationController
             activity=params[:activity]
             outing=Outing.new()
             outing.user=user
-            
             dateFood=Activity.find_or_create_by(yelpID: params[:food][:id])
             if dateFood.name == nil
                 dateFood.name = food[:name]
@@ -41,7 +39,6 @@ class OutingsController < ApplicationController
                 dateFood.display_phone = food[:display_phone]
             end
             outing.activities << dateFood
-
             dateActivity=Activity.find_or_create_by(yelpID: params[:activity][:id])
             if dateActivity.name == nil
                 dateActivity.name = activity[:name]
@@ -57,18 +54,12 @@ class OutingsController < ApplicationController
             dateFood.save
             dateActivity.save
             render json: {status: 201}
-
-
-    
         end
-
     end
 
     def destroy
-        # byebug
         outing=Outing.find_by(id: params[:id])
         outing.destroy
         render json: {status: 204}
-
     end
 end

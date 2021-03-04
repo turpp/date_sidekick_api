@@ -2,7 +2,6 @@ class SessionsController < ApplicationController
 
     def create
         user = User.find_by(username: params[:user][:username])
-
         if user&&user.authenticate(params[:user][:password])
             session[:id] = user.id
             render json: {status: 201, user: user, logged_in: true}
@@ -17,7 +16,6 @@ class SessionsController < ApplicationController
         else
             render json: {status: 400, user:{}, logged_in: false}
         end
-
     end
 
     def logout
