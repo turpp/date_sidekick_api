@@ -6,7 +6,7 @@ class CreateActivities < ActiveRecord::Migration[6.0]
       t.string :image_url
       t.string :url
       t.string :categories
-      t.integer :price
+      t.string :price
       t.string :location
       t.string :display_phone
 
