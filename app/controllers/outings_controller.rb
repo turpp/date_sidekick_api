@@ -57,9 +57,22 @@ class OutingsController < ApplicationController
         end
     end
 
+    def update
+        outing=Outing.find_by(id: params[:id])
+        # byebug
+        outing.update(outing_params)
+        render json: {status: 201}
+    end
+
     def destroy
         outing=Outing.find_by(id: params[:id])
         outing.destroy
         render json: {status: 204}
+    end
+
+    private
+
+    def outing_params
+        params.require(:outing).permit(:notes, :date)
     end
 end
