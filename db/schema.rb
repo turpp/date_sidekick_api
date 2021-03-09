@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_002815) do
     t.string "image_url"
     t.string "url"
     t.string "categories"
-    t.integer "price"
+    t.string "price"
     t.string "location"
     t.string "display_phone"
     t.datetime "created_at", precision: 6, null: false
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2021_02_25_002815) do
   end
 
   create_table "outings", force: :cascade do |t|
-    t.date "date"
+    t.string "date"
     t.text "notes"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
