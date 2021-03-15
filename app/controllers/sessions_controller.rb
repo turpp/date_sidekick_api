@@ -6,7 +6,11 @@ class SessionsController < ApplicationController
             session[:id] = user.id
             render json: {status: 201, user: user, logged_in: true}
         else
-            render json: {status: 401, message: 'User not found or password incorrect'}
+            if user == nil
+                render json: {status: 401, message: 'Username not found'}
+             else
+                 render json: {status: 401, message: 'Password Incorrect'}
+             end
         end
     end
 
