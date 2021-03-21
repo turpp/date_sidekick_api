@@ -9,17 +9,12 @@ class OutingsController < ApplicationController
         outing.user=user
         activity=Activity.find_or_create_by(yelpID: params[:food][:id])
         if activity.name == nil
-            activity.name = food[:name]
-            activity.image_url = food[:image_url]
-            activity.url = food[:url]
             activity.categories = food[:categories]
-            activity.price=food[:price]
             activity.location = food[:location]
-            activity.display_phone = food[:display_phone]
+            activity.update(food_params)
         end
         outing.activities << activity
         outing.save
-        activity.save
         render json: {status: 201}
         end
 
@@ -30,36 +25,25 @@ class OutingsController < ApplicationController
             outing.user=user
             dateFood=Activity.find_or_create_by(yelpID: params[:food][:id])
             if dateFood.name == nil
-                dateFood.name = food[:name]
-                dateFood.image_url = food[:image_url]
-                dateFood.url = food[:url]
                 dateFood.categories = food[:categories]
-                dateFood.price=food[:price]
                 dateFood.location = food[:location]
-                dateFood.display_phone = food[:display_phone]
+                dateFood.update(food_params)
             end
             outing.activities << dateFood
             dateActivity=Activity.find_or_create_by(yelpID: params[:activity][:id])
             if dateActivity.name == nil
-                dateActivity.name = activity[:name]
-                dateActivity.image_url = activity[:image_url]
-                dateActivity.url = activity[:url]
                 dateActivity.categories = activity[:categories]
-                dateActivity.price=activity[:price]
                 dateActivity.location = activity[:location]
-                dateActivity.display_phone = activity[:display_phone]
+                dateActivity.update(activity_params)
             end
             outing.activities << dateActivity
             outing.save
-            dateFood.save
-            dateActivity.save
             render json: {status: 201}
         end
     end
 
     def update
         outing=Outing.find_by(id: params[:id])
-        # byebug
         outing.update(outing_params)
         render json: {status: 201}
     end
@@ -74,5 +58,13 @@ class OutingsController < ApplicationController
 
     def outing_params
         params.require(:outing).permit(:notes, :date)
+    end
+
+    def food_params
+        params.require(:food).permit(:name, :image_url, :url, :categories, :price, :location, :display_phone)
+    end
+
+    def activity_params
+        params.require(:activity).permit(:name, :image_url, :url, :categories, :price, :location, :display_phone)
     end
 end
