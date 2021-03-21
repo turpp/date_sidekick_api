@@ -6,7 +6,6 @@ class UsersController < ApplicationController
         session[:id] = user.id
         render json: {status: 201, user:user, logged_in: true}
        else
-        # byebug
         render json: {status: 500, message: user.errors.full_messages[-1]}
        end
     end

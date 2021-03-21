@@ -4,7 +4,6 @@ class ActivitiesController < ApplicationController
 @@client = Yelp::Fusion::Client.new(@@KEY)
 
     def findActivity
-        # byebug
         response=@@client.search(params[:zipcode], term: 'food')
         render json: response
     end
