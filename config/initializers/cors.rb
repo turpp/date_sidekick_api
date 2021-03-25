@@ -8,7 +8,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   # production
   allow do
-    origins 'https://glacial-harbor-67608.herokuapp.com'
+    origins 'https://date-sidekick.herokuapp.com'
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
