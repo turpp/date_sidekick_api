@@ -1,18 +1,34 @@
-# README
+<h1 align="center">Welcome to dateSidekick 👋</h1>
+<p>
+</p>
 
-This is a backend API for Date Sidekick. The React Front end can be found at https://github.com/turpp/dateSidekick. IMPORTANT: to run in development make sure that rails is running at http://localhost:3000 and the front-end is running at http://localhost:3001. This api is setup to store users dates and information on the places they have gone. To get infomration from Yelp-fusion API this backend will make a request and relay that to the front-end. No information from the query is saved. 
+> This is the backend API for Date sidekick. Deciding what where to go on a date is hard. I have spend countless hours debating what place to eat at or what activity to do. Date Sidekick fixes this issues. There are two main functions of Date Sidekick. Random Mode. This is my personal favorite, enter your zipcode and select food or food and activity and date sidekick will give you a date in your area. If you want more control you can always create your own date from a selection of items in your area. Once you decide on a date you can save it to your profile for later use. Date Sidekick uses Yelp-Fusion API to get all the information. 
 
+### ✨ [Demo](https://www.youtube.com/watch?v=9xRFcWP8kOo)
 
+## Install
 
-* Ruby version
-ruby '2.6.1'
-* System dependencies
-gem 'yelp-fusion'
-gem 'fast_jsonapi'
-gem 'dotenv-rails'
-* Configuration
-must run bundle install to make sure you have required gems
-must have postgreSQL for the database
-* How to run the test suite
-No test at this time
+```sh
+bundle install
+```
 
+## Usage
+
+```sh
+To start backend. Make sure you have postgres installed and run bundle install. You will need to initialize your data base with rails db:create rails:db migrate. Then rails s to start the server. Make sure rails is running a localhost:3000.
+```
+
+## Author
+
+👤 **Tripp White**
+
+* Website: www.linkedin.com/in/thomas-tripp-white
+* Github: [@turpp](https://github.com/turpp)
+* LinkedIn: [@Thomas\(Tripp\) White](https://linkedin.com/in/Thomas\(Tripp\) White)
+
+## Show your support
+
+Give a ⭐️ if this project helped you!
+
+***
+_This README was generated with ❤️ by [readme-md-generator](https://github.com/kefranabg/readme-md-generator)_
