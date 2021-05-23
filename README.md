@@ -15,24 +15,30 @@
 ### ✨ [Demo](https://www.youtube.com/watch?v=9xRFcWP8kOo)
 
 ## Install
-
+>This rails applicaton takes advantage of some great gems so make sure to bundle and install the gemfile to get everything up a running.
 ```sh
 bundle install
 ```
 
 ## Usage
 
-```sh
-To start backend. Make sure you have postgres installed and run bundle install. You will need to initialize your data base with rails db:create rails:db migrate. Then rails s to start the server. Make sure rails is running a localhost:3000.
+>I used Postgres as my database. You will need to initialize your database.
+```javascript
+ rails db:create
+  rails:db migrate
 ```
+> Make sure your server is running in localhost:3000 and your front end is hosted on localhost:3001 due to cors.
+```javascript
+rails s
+```
+
 
 ## Author
 
 👤 **Tripp White**
 
-* Website: www.linkedin.com/in/thomas-tripp-white
 * Github: [@turpp](https://github.com/turpp)
-* LinkedIn: [@Thomas\(Tripp\) White](https://linkedin.com/in/Thomas\(Tripp\) White)
+* LinkedIn: @Thomas (Tripp) White www.linkedin.com/in/thomas-tripp-white
 
 ## Show your support
 
