@@ -2,7 +2,11 @@
 <p>
 </p>
 
-> This is the backend API for Date sidekick. Deciding what where to go on a date is hard. I have spend countless hours debating what place to eat at or what activity to do. Date Sidekick fixes this issues. There are two main functions of Date Sidekick. Random Mode. This is my personal favorite, enter your zipcode and select food or food and activity and date sidekick will give you a date in your area. If you want more control you can always create your own date from a selection of items in your area. Once you decide on a date you can save it to your profile for later use. Date Sidekick uses Yelp-Fusion API to get all the information. 
+> This is the backend API for Date sidekick. Deciding what where to go on a date is hard. I have spend countless hours debating what place to eat at or what activity to do. Date Sidekick fixes this issues. There are two main functions of Date Sidekick. 
+>Random Mode: This is my personal favorite, enter your zipcode and select food or food and activity and date sidekick will give you a date in your area. 
+>If you want more control you can always create your own date from a selection of items in your area. Once you decide on a date you can save it to your profile for later use. 
+>Date Sidekick uses Yelp-Fusion API to get all the information. 
+>Frontend is built with React and styled with bootstrap. https://github.com/turpp/dateSidekick
 
 ### ✨ [Demo](https://www.youtube.com/watch?v=9xRFcWP8kOo)
 
