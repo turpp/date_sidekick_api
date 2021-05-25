@@ -8,7 +8,7 @@
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   # production
   allow do
-    origins 'https://date-sidekick.herokuapp.com'
+    origins 'https://turpp.github.io/dateSidekick/'
     resource '*',
       headers: :any,
       methods: [:get, :post, :put, :patch, :delete, :options, :head],
@@ -16,13 +16,13 @@ Rails.application.config.middleware.insert_before 0, Rack::Cors do
   end
 
 # development
-  allow do
-    origins 'http://localhost:3001'
-    resource '*',
-      headers: :any,
-      methods: [:get, :post, :put, :patch, :delete, :options, :head],
-      credentials: true
-  end
+  # allow do
+  #   origins 'http://localhost:3001'
+  #   resource '*',
+  #     headers: :any,
+  #     methods: [:get, :post, :put, :patch, :delete, :options, :head],
+  #     credentials: true
+  # end
 
 end
 
